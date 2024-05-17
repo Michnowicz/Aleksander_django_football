@@ -343,7 +343,28 @@ def players():
         ["Freyja", "Seymore", 25, "020 0023 2701","F",230,7,1],
         ["Genevieve", "Drouin", 29, "020 2739 2701","F",230,7,2],
         ["Karine", "Porchet", 30, "020 3674 3982","F",230,7,3],
+    ]
+    for p in players:
+        country = Country.objects.get(id=p[5])
+        team = Team.objects.get(id=p[6])
+        role = Role.objects.get(id=p[7])
+        seeder = Seed.seeder()
+        seeder.add_entity(Player,1,{
+            'firstname' : lambda x : p[0],
+            "lastname" : lambda x : p[1],
+            "age" : lambda x : p[2],
+            "phone" : lambda x : p[3],
+            "mail" : lambda x : f"{p[0]}{p[1]}@buhurt.com",
+            "gender" : lambda x : p[4],
+            "image" : lambda x : "images/male_fighter.jpg",
+            "country" : lambda x : country,
+            "team" : lambda x : team,
+            "role" : lambda x : role,
+        })
+        pks = seeder.execute()
+        print(pks)
 
+    teamless = [
         ["Aaron", "Miller", 30, "030 3892 3672","M",None,None,3],
         ["Arvid", "Gahsche", 25, "010 2093 2651","M",None,None,1],
         ["Bastien", "Grandcamp", 32, "015 2983 3982","M",None,None,4],
@@ -360,23 +381,21 @@ def players():
         ["Emeline", "Barbier", 23, "020 3892 4362","F",None,None,3],
         ["Helmi", "Keränen", 32, "012 4983 4663","F",None,None,3],
     ]
-    for p in players:
-        country = Country.objects.get(id=p[4])
-        team = Team.objects.get(id=[5])
-        role = Role.objects.get(id=[6])
-
+    for t in teamless:
+        role = Role.objects.get(id=t[7])
         seeder = Seed.seeder()
-        seeder.add_entity(Role,1,{
-            'firstname' : lambda x : p[0],
-            "lastname" : lambda x : p[1],
-            "age" : lambda x : p[2],
-            "phone" : lambda x : p[3],
-            "mail" : lambda x : "{p[0]}{p[1]}@buhurt.com",
-            "gender" : lambda x : p[4],
+        seeder.add_entity(Player,1,{
+            'firstname' : lambda x : t[0],
+            "lastname" : lambda x : t[1],
+            "age" : lambda x : t[2],
+            "phone" : lambda x : t[3],
+            "mail" : lambda x : f"{t[0]}{t[1]}@buhurt.com",
+            "gender" : lambda x : t[4],
             "image" : lambda x : "images/male_fighter.jpg",
-            "country" : lambda x : country,
-            "team" : lambda x : team,
+            "country" : lambda x : None,
+            "team" : lambda x : None,
             "role" : lambda x : role,
         })
         pks = seeder.execute()
         print(pks)
+

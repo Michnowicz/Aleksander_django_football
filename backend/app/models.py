@@ -2,10 +2,10 @@ from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 class Continent(models.Model):
-    name = models.CharField(max_length=64)
+    name = models.CharField(max_length=64, null=True)
 
 class Country(models.Model):
-    name = models.CharField(max_length=125)
+    name = models.CharField(max_length=125, null=True)
     continent = models.ForeignKey(Continent, on_delete=models.SET_NULL, null=True)
 
 class Team(models.Model):

@@ -4,4 +4,4 @@ django.setup()
 from app import seed
 
 if __name__ == "__main__":
-    seed.countries()
+    seed.teams()

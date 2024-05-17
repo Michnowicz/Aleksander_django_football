@@ -11,7 +11,7 @@ class Country(models.Model):
 class Team(models.Model):
     name = models.CharField(max_length=125)
     city = models.CharField(max_length=64)
-    continent = models.ForeignKey(Country, on_delete=models.SET_NULL, null=True)
+    continent = models.ForeignKey(Continent, on_delete=models.SET_NULL, null=True)
 
 class Role(models.Model):
     name = models.CharField(max_length=64)

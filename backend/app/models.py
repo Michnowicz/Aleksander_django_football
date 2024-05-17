@@ -6,12 +6,12 @@ class Continent(models.Model):
 
 class Country(models.Model):
     name = models.CharField(max_length=125)
-    continent = models.ForeignKey(Continent, related_name="continents", on_delete=models.SET_NULL)
+    continent = models.ForeignKey(Continent, on_delete=models.SET_NULL, null=True)
 
 class Team(models.Model):
     name = models.CharField(max_length=125)
     city = models.CharField(max_length=64)
-    continent = models.ForeignKey(Country, related_name="countries", on_delete=models.SET_NULL)
+    continent = models.ForeignKey(Country, on_delete=models.SET_NULL, null=True)
 
 class Role(models.Model):
     name = models.CharField(max_length=64)
@@ -24,9 +24,9 @@ class Player(models.Model):
     mail = models.EmailField()
     gender = models.CharField(max_length=1)
     image = models.ImageField(upload_to="images/")
-    country = models.ForeignKey(Country, related_name="countries", on_delete=models.SET_NULL)
-    team = models.ForeignKey(Team, related_name="teams", on_delete=models.SET_NULL)
-    role = models.ForeignKey(Role, related_name="roles", on_delete=models.SET_NULL)
+    country = models.ForeignKey(Country, on_delete=models.SET_NULL, null=True)
+    team = models.ForeignKey(Team, on_delete=models.SET_NULL, null=True)
+    role = models.ForeignKey(Role, on_delete=models.SET_NULL, null=True)
 
     def delete(self, *args, **kwargs):
         self.media_file.delete()

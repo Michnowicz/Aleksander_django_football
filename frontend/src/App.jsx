@@ -2,6 +2,8 @@ import { RouterProvider, createBrowserRouter  } from 'react-router-dom';
 
 import './App.css'
 import Home from './pages/Home/Home';
+import PlayersGet from './pages/Backoffice/PlayersGet/PlayersGet';
+import TeamsGet from './pages/Backoffice/Teams/Teams';
 
 function App() {
 
@@ -9,6 +11,14 @@ function App() {
     {
       path:"/",
       element:<Home/>,
+    },
+    {
+      path:"/Backoffice/players",
+      element:<PlayersGet/>,
+    },
+    {
+      path:"/Backoffice/teams",
+      element:<TeamsGet/>,
     },
   ])
 

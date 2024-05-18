@@ -6,7 +6,7 @@ export default function Navbar() {
 
     return(
         <nav className="Navbar">
-            <Link to="/backoffice">Backoffice</Link>
+            <Link to="/backoffice/players">Dashboard</Link>
         </nav>
     )
 }

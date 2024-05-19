@@ -42,3 +42,19 @@
     justify-content: space-between;
     gap: 10px;
 }
+
+.CreatePlayer .create button {
+    color: white;
+    font-size: 1.1rem;
+    background-color: rgb(100, 180, 255);
+    border-radius: 6px;
+    padding: 8px 12px 8px 12px;
+    border: none;
+    cursor: pointer;
+}
+.CreatePlayer .create button:hover {
+    background-color: rgb(46, 154, 255);
+}
+.CreatePlayer .create button:active {
+    background-color: rgb(152, 205, 255);
+}

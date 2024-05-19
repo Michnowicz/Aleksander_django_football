@@ -29,5 +29,5 @@ class Player(models.Model):
     role = models.ForeignKey(Role, on_delete=models.SET_NULL, null=True)
 
     def delete(self, *args, **kwargs):
-        self.media_file.delete()
+        self.image.delete()
         super(Player, self).delete(*args, **kwargs)

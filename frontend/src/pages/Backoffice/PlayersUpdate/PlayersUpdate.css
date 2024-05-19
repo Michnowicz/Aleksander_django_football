@@ -1,0 +1,32 @@
+
+
+.PlayersUpdate {
+    display: flex;
+    min-height: 100vh;
+    background-color: rgb(244, 244, 244);
+    box-sizing: content-box;
+}
+
+.Infos {
+    width: 100%;
+    padding: 40px;
+    padding-left: 150px;
+    display: flex;
+    gap: 40px;
+}
+
+
+.PlayersUpdate form {
+    padding: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgb(188, 188, 188);
+    display: flex;
+    gap: 40px;
+}
+
+.playerImage img {
+    height: 300px;
+}

@@ -19,11 +19,6 @@ export default function CreatePlayer({teams, roles,countries,setPlayers,}) {
     })
     const [imageFile, setImageFile] = useState(null);
 
-    useEffect(()=>{
-        console.log(playerForm)
-    },[playerForm])
-
-
     const createForm = async () => {
         try {
             const formData = new FormData();
@@ -107,6 +102,7 @@ export default function CreatePlayer({teams, roles,countries,setPlayers,}) {
                         <div className="cInput">
                             <label htmlFor="gender">Gender</label>
                             <select name="gender" id="gender_id" onChange={handleChange}>
+                                <option value="">-----</option>
                                 <option value="M">Male</option>
                                 <option value="F">Female</option>
                             </select>

@@ -24,6 +24,11 @@ export default function PlayersGet() {
         setCountries(response.data.data.countries)
     }
 
+    const deletePlayer = async (id) => {
+        await axios.delete(`http://localhost:8000/api/data/player_delete/${id}`);
+        getData();
+    }
+
     
     return(
         <section className="PlayersGet">
@@ -55,8 +60,8 @@ export default function PlayersGet() {
                                         <p className="c4">{teams[p.team-1].name}</p>
                                     }
                                     <div className="c5">
-                                        <Link className="c5a">Update</Link>
-                                        <Link className="c5b">Delete</Link>
+                                        <Link className="c5a" to={`../backoffice/players/${p.id}`}>Update</Link>
+                                        <button className="c5b" onClick={()=>deletePlayer(p.id)}>Delete</button>
                                     </div>
                                 </div>
                             ))

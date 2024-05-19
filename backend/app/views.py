@@ -4,6 +4,9 @@ from .models import *
 from .serializers import *
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework import status
+
 
 # Create your views here.
 
@@ -22,6 +25,24 @@ def get_data(request):
 
     return JsonResponse({"data":data})
 
+def get_countries(request):
+    countries = CountrySerializer(Country.objects.all(), many=True)
+    return JsonResponse({"data":countries.data})
+
+def get_roles(request):
+    roles = RoleSerializer(Role.objects.all(), many=True)
+    return JsonResponse({"data":roles.data})
+
+def get_teams(request):
+    teams = TeamSerializer(Team.objects.all(), many=True)
+    return JsonResponse({"data":teams.data})
+
+def get_player_detail(request,id):
+    player = PlayerSerializer(Player.objects.get(id=id))
+    return JsonResponse({"data": player.data})
+
+
+
 @api_view(["POST"])
 def create_player(request):
     player = PlayerSerializer(data=request.data)
@@ -30,3 +51,34 @@ def create_player(request):
         player.save()
         return Response({"message": "succes"})
     return Response({"message":"error", "errors":player.errors})
+
+
+
+@api_view(['DELETE'])
+def delete_player(request, id):
+    try:
+        player = Player.objects.get(id=id)
+    except Player.DoesNotExist:
+        return Response({'message' : 'no entry found'})
+    if request.method == 'DELETE':
+        serializer = PlayerSerializer(player)
+        player.delete()
+        return Response(serializer.data)
+    return JsonResponse({'message': 'Item item deleted successfully'})
+
+
+@api_view(['GET', 'PUT'])
+def update_player(request,id):
+    try:
+        player = Player.objects.get(id=id)
+    except Player.DoesNotExist:
+        return Response({'message' : 'no entry found'})
+    if request.method == 'GET':
+        serializer = PlayerSerializer(player)
+        return Response(serializer.data)
+    elif request.method == 'PUT':
+        serializer = PlayerSerializer(player, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+        return Response(request.data)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

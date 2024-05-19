@@ -41,6 +41,10 @@ def get_teams(request):
     teams = TeamSerializer(Team.objects.all(), many=True)
     return JsonResponse({"data":teams.data})
 
+def get_team_detail(request,id):
+    team = TeamSerializer(Team.objects.get(id=id))
+    return JsonResponse({"data": team.data})
+
 def get_player_detail(request,id):
     player = PlayerSerializer(Player.objects.get(id=id))
     return JsonResponse({"data": player.data})
@@ -108,3 +112,19 @@ def delete_team(request, id):
         team.delete()
         return Response(serializer.data)
     return JsonResponse({'message': 'Item deleted successfully'})
+
+@api_view(['GET', 'PUT'])
+def update_team(request,id):
+    try:
+        team = Team.objects.get(id=id)
+    except Team.DoesNotExist:
+        return Response({'message' : 'no entry found'})
+    if request.method == 'GET':
+        serializer = TeamSerializer(team)
+        return Response(serializer.data)
+    elif request.method == 'PUT':
+        serializer = TeamSerializer(team, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+        return Response(request.data)
+    return Response(serializer.error, status=status.HTTP_400_BAD_REQUEST)

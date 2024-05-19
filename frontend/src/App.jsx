@@ -5,6 +5,7 @@ import Home from './pages/Home/Home';
 import PlayersGet from './pages/Backoffice/PlayersGet/PlayersGet';
 import TeamsGet from './pages/Backoffice/Teams/Teams';
 import PlayersUpdate from './pages/Backoffice/PlayersUpdate/PlayersUpdate';
+import TeamUpdate from './pages/Backoffice/TeamUpdate/TeamUpdate';
 
 function App() {
 
@@ -24,7 +25,11 @@ function App() {
     {
       path:"/backoffice/players/:id",
       element:<PlayersUpdate/>
-    }
+    },
+    {
+      path:"/backoffice/teams/:id",
+      element:<TeamUpdate/>
+    },
   ])
 
   return (

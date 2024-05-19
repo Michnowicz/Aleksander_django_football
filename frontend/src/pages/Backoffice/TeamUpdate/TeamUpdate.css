@@ -1,0 +1,50 @@
+
+.TeamUpdate {
+    display: flex;
+    min-height: 100vh;
+    background-color: rgb(244, 244, 244);
+    box-sizing: content-box;
+}
+
+.TeamUpdate .Infos {
+    width: 100%;
+    padding: 40px;
+    padding-left: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.TeamUpdate form {
+    padding: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgb(188, 188, 188);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.TeamUpdate .cInput {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.TeamUpdate button {
+    color: white;
+    font-size: 1.1rem;
+    background-color: rgb(100, 180, 255);
+    border-radius: 6px;
+    padding: 8px 12px 8px 12px;
+    border: none;
+    cursor: pointer;
+}
+.TeamUpdate button:hover {
+    background-color: rgb(46, 154, 255);
+}
+.TeamUpdate button:active {
+    background-color: rgb(152, 205, 255);
+}

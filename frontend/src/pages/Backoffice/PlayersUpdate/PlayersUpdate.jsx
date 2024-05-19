@@ -59,7 +59,7 @@ export default function PlayersUpdate() {
             console.error('Error updating product:', error);
         }
         window.location.reload();
-        }
+    }
 
     useEffect(()=>{
         console.log(player);

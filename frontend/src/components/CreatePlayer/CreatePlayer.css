@@ -1,0 +1,44 @@
+
+
+.CreatePlayer {
+    padding: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgb(188, 188, 188);
+}
+
+.cpForm {
+    display: flex;
+    gap: 40px;
+}
+
+.cpForm .imgForm {
+    height: 200px;
+    width: 300px;
+}
+
+.cpForm .inputForm {
+    display: flex;
+    gap: 3rem;
+}
+
+.CreatePlayer .c1, .CreatePlayer .c2 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.CreatePlayer input {
+    width: 150px;
+}
+.CreatePlayer select {
+    width: 150px;
+}
+
+.CreatePlayer .cInput {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}

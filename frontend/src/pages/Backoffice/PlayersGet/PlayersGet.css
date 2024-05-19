@@ -2,13 +2,18 @@
 
 .PlayersGet {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgb(244, 244, 244);
+    box-sizing: content-box;
 }
 
 .Infos {
     width: 100%;
     padding: 40px;
+    padding-left: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .players {
@@ -57,8 +62,8 @@
 }
 
 .playersInfo {
-    overflow: hidden;
     overflow: scroll;
+    scroll-behavior: smooth;
     height: calc(100vh - 200px);
 }
 

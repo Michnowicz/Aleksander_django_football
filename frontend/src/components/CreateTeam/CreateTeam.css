@@ -1,0 +1,39 @@
+
+
+.CreateTeam {
+    padding: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgb(188, 188, 188);
+}
+
+.CreateTeam .cpForm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.CreateTeam .cInput {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 250px;
+}
+
+.CreateTeam button {
+    color: white;
+    font-size: 1.1rem;
+    background-color: rgb(100, 180, 255);
+    border-radius: 6px;
+    padding: 8px 12px 8px 12px;
+    border: none;
+    cursor: pointer;
+}
+.CreateTeam button:hover {
+    background-color: rgb(46, 154, 255);
+}
+.CreateTeam button:active {
+    background-color: rgb(152, 205, 255);
+}

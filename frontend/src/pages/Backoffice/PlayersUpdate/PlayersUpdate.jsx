@@ -46,6 +46,7 @@ export default function PlayersUpdate() {
     }
 
     const handleSubmit = async (e) => {
+
         e.preventDefault();
         try {
             await axios.put(`http://127.0.0.1:8000/api/data/player_update/${id}`, player, {
@@ -57,7 +58,8 @@ export default function PlayersUpdate() {
         } catch (error) {
             console.error('Error updating product:', error);
         }
-    };
+        window.location.reload();
+        }
 
     useEffect(()=>{
         console.log(player);

@@ -25,6 +25,10 @@ def get_data(request):
 
     return JsonResponse({"data":data})
 
+def get_continents(request):
+    continents = ContinentSerializer(Continent.objects.all(), many=True)
+    return JsonResponse({"data":continents.data})
+
 def get_countries(request):
     countries = CountrySerializer(Country.objects.all(), many=True)
     return JsonResponse({"data":countries.data})
@@ -81,4 +85,26 @@ def update_player(request,id):
         if serializer.is_valid():
             serializer.save()
         return Response(request.data)
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    return Response(serializer.error, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+@api_view(["POST"])
+def create_team(request):
+    team = TeamSerializer(data=request.data)
+    if team.is_valid():
+        team.save()
+        return Response({"message": "succes"})
+    return Response({"message":"error", "errors":team.errors})
+
+@api_view(['DELETE'])
+def delete_team(request, id):
+    try:
+        team = Team.objects.get(id=id)
+    except Team.DoesNotExist:
+        return Response({'message' : 'no entry found'})
+    if request.method == 'DELETE':
+        serializer = TeamSerializer(team)
+        team.delete()
+        return Response(serializer.data)
+    return JsonResponse({'message': 'Item deleted successfully'})

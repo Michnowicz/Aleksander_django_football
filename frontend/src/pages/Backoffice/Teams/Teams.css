@@ -1,0 +1,106 @@
+
+
+.TeamsGet {
+    display: flex;
+    min-height: 100vh;
+    background-color: rgb(244, 244, 244);
+    box-sizing: content-box;
+}
+
+.Infos {
+    width: 100%;
+    padding: 40px;
+    padding-left: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.teamsTitle {
+    display: flex;
+    border-bottom: 1px solid rgba(84, 84, 84, 0.303);
+}
+.teamsTitle h3 {
+    padding: 10px 2px 10px 2px;
+}
+
+.teamsInfo {
+    overflow: scroll;
+    scroll-behavior: smooth;
+    max-height: calc(100vh - 200px);
+}
+
+.teams {
+    padding: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgb(188, 188, 188);
+}
+.teams .c1 {
+    width: 30%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+.teams .c2 {
+    width: 20%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+.teams .c4 {
+    width: 17%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+.teams .c3 {
+    width: 20%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.team {
+    display: flex;
+    border-bottom: 1px solid rgba(84, 84, 84, 0.303);
+    align-items: center;
+}
+.team:last-of-type {
+    border-bottom: none;
+}
+.team p {
+    padding: 16px 4px 16px 4px;
+}
+
+.team div {
+    display: flex;
+    align-items: center;
+}
+
+.teams .c3 a,.teams .c3 button  {
+    padding: 8px 12px 8px 12px;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.teams .c3a {
+    background-color: rgb(100, 180, 255);
+}
+.teams .c3a:hover {
+    background-color: rgb(46, 154, 255);
+}
+.teams .c3a:active {
+    background-color: rgb(152, 205, 255);
+}
+.teams .c3b {
+    background-color: rgb(253, 98, 98);
+}
+.teams .c3b:hover {
+    background-color: rgb(255, 41, 41);
+}
+.teams .c3b:active {
+    background-color: rgb(255, 164, 164);
+}

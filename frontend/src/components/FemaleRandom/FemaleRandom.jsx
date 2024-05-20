@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react"
 import "./FemaleRandom.css"
 import axios from "axios"
+import { Link } from "react-router-dom"
 
-
-export default function FemaleRandom() {
+export default function FemaleRandom({players, teams}) {
 
     const [female, setFemale] = useState(null)
-    const [teams, setTeams] = useState(null)
 
     const randomNum = (min, max) => {
         return Math.floor(Math.random()
@@ -14,20 +13,16 @@ export default function FemaleRandom() {
     };
 
     useEffect(()=>{
-        getData()
-    },[])
-    const getData = async () => {
-        const response = await axios.get("http://localhost:8000/api/data")
-
-        // random female players
-        const players = response.data.data.players.filter(p => (p.gender == "F"))
-        const randomPlayers = []
-        for (let i = 1; i < 6; i++) {
-            randomPlayers.push(players[randomNum(0, players.length)])
+        if (players != null) {
+            const femalePlayers = players.filter(p => (p.gender == "F"))
+            console.log(femalePlayers);
+            const randomPlayers = []
+            for (let i = 1; i < 5; i++) {
+                randomPlayers.push(femalePlayers[randomNum(0, femalePlayers.length)])
+            }
+            setFemale(randomPlayers)
         }
-        setFemale(randomPlayers)
-        setTeams(response.data.data.teams)
-    }
+    },[players])
 
     return(
         <section className="PlayerTeamless bg-ddb sec">
@@ -37,19 +32,23 @@ export default function FemaleRandom() {
             </div>
             <div className="sBody">
                 {
-                    (female != null) && teams ?
+                    (female != null) && teams && players ?
                     female.map((f,i)=>(
                     <div className="sBodyCard s-db bg-db" key={i}>
                         <div className="cardImg">
                             <img src={"http://localhost:8000"+f.image} alt="" />
                         </div>
-                        <div className="cardBody t-w ">
-                            <h2>{f.firstname} {f.lastname}</h2>
+                        <div className="cardBody">
+                            <Link to={`../players/${f.id}`} className="t-w">
+                                <h2>{f.firstname} {f.lastname}</h2>
+                            </Link>
                             {
                                 f.team == null ?
-                                <h4>No team</h4>
+                                <h4 className="t-g">No team</h4>
                                 :
+                                <Link to={`../players/${teams[f.team-1].name}`} className="t-g">
                                 <h4>{teams[f.team-1].name}</h4>
+                                </Link>
                             }
                         </div>
                     </div>

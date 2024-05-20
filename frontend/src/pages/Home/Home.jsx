@@ -13,6 +13,21 @@ import axios from "axios"
 
 export default function Home() {
 
+    const [players, setPlayers] = useState(null)
+    const [teams, setTeams] = useState(null)
+
+    useEffect(()=>{
+        getData()
+    },[])
+    const getData = async () => {
+        const response = await axios.get("http://localhost:8000/api/data")
+        setPlayers(response.data.data.players)
+        setTeams(response.data.data.teams)
+    }
+
+    useEffect(()=>{
+        console.log(teams);
+    },[teams])
     
     return(
         <>
@@ -23,12 +38,12 @@ export default function Home() {
                 {
                     
                 }
-                <PlayerTeamless />
-                <PlayerTeam />
-                <European/>
-                <NonEuropean/>
-                <FemaleRandom/>
-                <MaleRandom/>
+                <PlayerTeamless players={players}/>
+                <PlayerTeam players={players} teams={teams}/>
+                <European teams={teams}/>
+                <NonEuropean teams={teams}/>
+                <FemaleRandom players={players} teams={teams}/>
+                <MaleRandom players={players} teams={teams}/>
             </div>
         </>
     )

@@ -2,22 +2,18 @@ import "./NonEuropean.css"
 
 import { useEffect, useState } from "react"
 import axios from "axios"
+import { Link } from "react-router-dom"
 
-
-export default function NonEuropean() {
+export default function NonEuropean({teams}) {
 
     const [NonEuropean, setNonEuropean] = useState(null)
 
     useEffect(()=>{
-        getData()
-    },[])
-    const getData = async () => {
-        const response = await axios.get("http://localhost:8000/api/data/teams")
-
-        const filtered = response.data.data.filter(e => e.continent != 3)
-        console.log(filtered);
-        setNonEuropean(filtered)
-    }
+        if (teams != null) {
+            const filtered = teams.filter(e => e.continent != 3)
+            setNonEuropean(filtered)
+        }
+    },[teams])
 
     return(
         <section className="European bd-w sec">
@@ -30,7 +26,9 @@ export default function NonEuropean() {
                     NonEuropean ?
                     NonEuropean.map((e,i)=>(
                     <div className="banner s-w" key={i}>
-                        <h2 className="t-b">{e.name}</h2>
+                        <Link to={`../teams/${e.id}`} className="t-w">
+                            <h2 className="t-b">{e.name}</h2>
+                        </Link>
                     </div>
                     ))
                     :

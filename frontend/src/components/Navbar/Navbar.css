@@ -1,0 +1,52 @@
+
+
+.Navbar {
+    background-color: #03141a;
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 1px 1px 8px #01090b;
+}
+
+.navLogo {
+    width: 25vw;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.navLogo img {
+    height: 80px;
+}
+.navLogo h2 {
+    color: white;
+}
+
+.navLinks {
+    width: 50vw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navLink {
+    height: max-content;
+    display: flex;
+    justify-content: center;
+}
+
+.navLink  a {
+    color: white;
+    font-size: 1.4rem;
+    padding: 20px;
+}
+
+
+.search {
+    width: 25vw;
+    box-sizing: border-box;
+    border-right: 40px;
+}

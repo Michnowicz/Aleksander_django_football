@@ -15,6 +15,7 @@ def get_data(request):
     teams = TeamSerializer(Team.objects.all(), many=True)
     roles = RoleSerializer(Role.objects.all(), many=True)
     countries = CountrySerializer(Country.objects.all(), many=True)
+    continents = ContinentSerializer(Continent.objects.all(), many=True)
 
     data = {
         "players":players.data,

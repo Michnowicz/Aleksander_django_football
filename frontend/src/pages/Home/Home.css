@@ -1,0 +1,99 @@
+
+
+
+.Home {
+    display: flex;
+    flex-direction: column;
+}
+
+.bg-db {
+    background-color: #03141a;
+}
+.bg-w {
+    background-color: white;
+}
+
+.s-w {
+    box-shadow: 1px 1px 8px rgb(188, 188, 188);
+}
+.s-db {
+    box-shadow: 1px 1px 8px #01090b;
+}
+
+.b-w {
+    border-bottom: 2px solid white;
+}
+.b-b {
+    border-bottom: 2px solid black;
+}
+
+.t-b {
+    color: black;
+}
+.t-w {
+    color: white;
+}
+
+
+.sec {
+    width: 100vw;
+    padding: 50px 10% 50px 10%;
+    box-sizing: border-box;
+    
+}
+
+.sTitle {
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+}
+.sTitle h2 {
+    font-size: 1.7em;
+    padding-bottom: 8px;
+}
+
+
+.sBody {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    padding-top: 40px;
+    gap: 30px;
+}
+.sBodyCard {
+    overflow: hidden;
+    border-radius: 6px;
+}
+.cardImg {
+    overflow: hidden;
+    height: 300px;
+    width: 300px;
+}
+.cardImg img {
+    width: 100%;
+    height: auto;
+}
+.cardBody {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cardBody h2 {
+    font-size: 1.3rem;
+}
+
+.sBodyTeam {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-top: 40px;
+    gap: 30px;
+    cursor: pointer;
+}
+.sBodyTeam .banner {
+    padding: 20px;
+    width: 50%;
+    border-radius: 6px;
+}

@@ -1,0 +1,84 @@
+
+
+
+
+.Teams {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 150px 10% 100px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.Teams .sBody {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.bg-ddb {
+    background-color: #020e13;
+}
+.bg-db {
+    background-color: #03141a;
+}
+
+.s-db {
+    box-shadow: 1px 1px 8px #01090b;
+}
+
+.b-b {
+    border-bottom: 2px solid black;
+}
+
+.t-b {
+    color: black;
+}
+.t-g {
+    color: rgba(255, 255, 255, 0.636);
+}
+.t-w {
+    color: rgb(255, 255, 255);
+}
+
+.Teams .sBodyCard {
+    padding: 40px;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.Teams .CardTitle {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.Teams .CardBody {
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    border-radius: 6px;
+    flex-wrap: wrap;
+}
+
+.Teams .TeamPlayer {
+    width: 250px;
+    padding: 20px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.Teams .pTitle {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 40px;
+}

@@ -6,6 +6,10 @@ import PlayersGet from './pages/Backoffice/PlayersGet/PlayersGet';
 import TeamsGet from './pages/Backoffice/Teams/Teams';
 import PlayersUpdate from './pages/Backoffice/PlayersUpdate/PlayersUpdate';
 import TeamUpdate from './pages/Backoffice/TeamUpdate/TeamUpdate';
+import Players from './pages/Players/Players';
+import UniquePlayer from './pages/UniquePlayer/UniquePlayer';
+import Teams from './pages/Teams/Teams';
+import UniqueTeam from './pages/UniqueTeam/UniqueTeam';
 
 function App() {
 
@@ -29,6 +33,22 @@ function App() {
     {
       path:"/backoffice/teams/:id",
       element:<TeamUpdate/>
+    },
+    {
+      path:"/players",
+      element:<Players/>
+    },
+    {
+      path:"/players/:id",
+      element:<UniquePlayer/>
+    },
+    {
+      path:"/teams",
+      element:<Teams/>
+    },
+    {
+      path:"/teams/:id",
+      element:<UniqueTeam/>
     },
   ])
 

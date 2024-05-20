@@ -9,6 +9,12 @@ body {
 a {
     text-decoration: none;
 }
+a:hover {
+    color: #8ccee4 !important;
+}
+a:active {
+    color: #b3e5f5 !important;
+}
 
 .disabled {
     display: none;

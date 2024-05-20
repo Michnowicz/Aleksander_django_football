@@ -16,14 +16,38 @@ def get_data(request):
     roles = RoleSerializer(Role.objects.all(), many=True)
     countries = CountrySerializer(Country.objects.all(), many=True)
     continents = ContinentSerializer(Continent.objects.all(), many=True)
-
     data = {
         "players":players.data,
         "teams":teams.data,
         "roles":roles.data,
         "countries":countries.data,
     }
+    return JsonResponse({"data":data})
 
+def get_Unique_Player(request,id):
+    player = PlayerSerializer(Player.objects.get(id=id))
+    teams = TeamSerializer(Team.objects.all(), many=True)
+    roles = RoleSerializer(Role.objects.all(), many=True)
+    countries = CountrySerializer(Country.objects.all(), many=True)
+    data = {
+        "player":player.data,
+        "teams":teams.data,
+        "roles":roles.data,
+        "countries":countries.data,
+    }
+    return JsonResponse({"data":data})
+
+def get_Unique_Team(request,id):
+    players = PlayerSerializer(Player.objects.all(), many=True)
+    team = TeamSerializer(Team.objects.get(id=id))
+    roles = RoleSerializer(Role.objects.all(), many=True)
+    continents = ContinentSerializer(Continent.objects.all(), many=True)
+    data = {
+        "players":players.data,
+        "team":team.data,
+        "roles":roles.data,
+        "continents":continents.data,
+    }
     return JsonResponse({"data":data})
 
 def get_continents(request):

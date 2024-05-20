@@ -28,7 +28,7 @@ export default function PlayerTeamless() {
     }
 
     return(
-        <section className="PlayerTeamless bg-db sec">
+        <section className="PlayerTeamless bg-ddb sec">
             <div className="sTitle t-w b-w">
                 <h2>Teamless Players</h2>
                 <div className="space"></div>
@@ -37,7 +37,7 @@ export default function PlayerTeamless() {
                 {
                     teamless ?
                     teamless.map((t,i)=>(
-                    <div className="sBodyCard s-db" key={i}>
+                    <div className="sBodyCard s-db bg-db" key={i}>
                         <div className="cardImg">
                             <img src={"http://localhost:8000"+t.image} alt="" />
                         </div>

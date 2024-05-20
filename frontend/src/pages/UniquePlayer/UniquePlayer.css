@@ -1,0 +1,72 @@
+
+
+.UniquePlayer {
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 150px 10% 100px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.UniquePlayer .bg-ddb {
+    background-color: #020e13;
+}
+.UniquePlayer .bg-db {
+    background-color: #03141a;
+}
+.UniquePlayer .s-db {
+    box-shadow: 1px 1px 8px #01090b;
+}
+.UniquePlayer .b-b {
+    border-bottom: 2px solid black;
+}
+.UniquePlayer .t-b {
+    color: black;
+}
+.UniquePlayer .t-g {
+    color: rgba(255, 255, 255, 0.636);
+}
+
+.UniquePlayer .Player {
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border-radius: 6px;
+    height: fit-content;
+}
+
+
+.UniquePlayer .PlayerImg {
+    width: 350px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
+.UniquePlayer .PlayerImg img {
+    height: 100%;
+}
+
+.UniquePlayer .PlayerBody {
+    height: fit-content;
+}
+
+.UniquePlayer .PlayerBody {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.UniquePlayer .bodyInfo {
+    display: flex;
+    gap: 10px;
+}
+
+.UniquePlayer .bodyInfo h2 {
+    font-size: 1.5rem;
+}
+
+.UniquePlayer .bodyInfo b, .bodyInfo p , .bodyInfo a {
+    font-size: 1.2rem;
+}

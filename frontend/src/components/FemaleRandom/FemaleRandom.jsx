@@ -30,26 +30,26 @@ export default function FemaleRandom() {
     }
 
     return(
-        <section className="PlayerTeamless bg-db sec">
+        <section className="PlayerTeamless bg-ddb sec">
             <div className="sTitle t-w b-w">
                 <h2>Female players</h2>
                 <div className="space"></div>
             </div>
             <div className="sBody">
                 {
-                    female && teams ?
-                    female.map((t,i)=>(
-                    <div className="sBodyCard s-db" key={i}>
+                    (female != null) && teams ?
+                    female.map((f,i)=>(
+                    <div className="sBodyCard s-db bg-db" key={i}>
                         <div className="cardImg">
-                            <img src={"http://localhost:8000"+t.image} alt="" />
+                            <img src={"http://localhost:8000"+f.image} alt="" />
                         </div>
-                        <div className="cardBody t-w">
-                            <h2>{t.firstname} {t.lastname}</h2>
+                        <div className="cardBody t-w ">
+                            <h2>{f.firstname} {f.lastname}</h2>
                             {
-                                t.team == null ?
+                                f.team == null ?
                                 <h4>No team</h4>
                                 :
-                                <h4>{teams[t.team-1].name}</h4>
+                                <h4>{teams[f.team-1].name}</h4>
                             }
                         </div>
                     </div>

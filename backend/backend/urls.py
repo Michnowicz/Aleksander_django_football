@@ -20,4 +20,6 @@ urlpatterns = [
     path('api/data/team_update/<int:id>', update_team),
     path('api/data/player_delete/<int:id>', delete_player),
     path('api/data/team_delete/<int:id>', delete_team),
+    path('api/data/get_unique_player/<int:id>', get_Unique_Player),
+    path('api/data/get_unique_team/<int:id>', get_Unique_Team),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

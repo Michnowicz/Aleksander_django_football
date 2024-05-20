@@ -20,16 +20,16 @@ export default function European() {
     }
 
     return(
-        <section className="European bg-db sec">
+        <section className="European bg-ddb sec">
             <div className="sTitle t-w b-w">
                 <h2>European Teams</h2>
                 <div className="space"></div>
             </div>
-            <div className="sBodyTeam">
+            <div className="sBodyTeam ">
                 {
                     european ?
                     european.map((e,i)=>(
-                    <div className="banner s-db" key={i}>
+                    <div className="banner s-db bg-db" key={i}>
                         <h2 className="t-w">{e.name}</h2>
                     </div>
                     ))

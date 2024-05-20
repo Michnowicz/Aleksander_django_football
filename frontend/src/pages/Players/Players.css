@@ -1,0 +1,85 @@
+
+
+
+
+.Players {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 150px 10% 100px 10%;
+    display: flex;
+    justify-content: center;
+    background-color: #020e13;
+}
+
+.Players .sBody {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+}
+
+.Players .bg-ddb {
+    background-color: #020e13;
+}
+.Players .bg-db {
+    background-color: #03141a;
+}
+
+.Players .s-db {
+    box-shadow: 1px 1px 8px #01090b;
+}
+
+.Players .b-b {
+    border-bottom: 2px solid black;
+}
+
+.Players .t-b {
+    color: black;
+}
+.Players .t-g {
+    color: rgba(255, 255, 255, 0.636);
+}
+
+.Players .sBodyCard {
+    overflow: hidden;
+    border-radius: 6px;
+    width: 200px;
+}
+
+.Players .cardImg {
+    overflow: hidden;
+    height: 200px;
+    width: 200px;
+}
+
+
+.Players .cardBody h2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+}
+.Players .cardBody h4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+}
+
+.Players .cardImg img {
+    width: 100%;
+    height: auto;
+}
+
+.Players .cardBody {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.Players .cardBody h2 {
+    font-size: 1.3rem;
+}

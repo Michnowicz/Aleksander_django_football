@@ -6,85 +6,88 @@
     flex-direction: column;
 }
 
-.bg-db {
+.Home .bg-ddb {
+    background-color: #020e13;
+}
+.Home .bg-db {
     background-color: #03141a;
 }
-.bg-w {
+.Home .bg-w {
     background-color: white;
 }
 
-.s-w {
+.Home .s-w {
     box-shadow: 1px 1px 8px rgb(188, 188, 188);
 }
-.s-db {
+.Home .s-db {
     box-shadow: 1px 1px 8px #01090b;
 }
 
-.b-w {
+.Home .b-w {
     border-bottom: 2px solid white;
 }
-.b-b {
+.Home .b-b {
     border-bottom: 2px solid black;
 }
 
-.t-b {
+.Home .t-b {
     color: black;
 }
-.t-w {
+.Home .t-w {
     color: white;
 }
 
 
-.sec {
+.Home .sec {
     width: 100vw;
     padding: 50px 10% 50px 10%;
     box-sizing: border-box;
     
 }
 
-.sTitle {
+.Home .sTitle {
     width: fit-content;
     display: flex;
     gap: 10px;
 }
-.sTitle h2 {
+.Home .sTitle h2 {
     font-size: 1.7em;
     padding-bottom: 8px;
 }
 
 
-.sBody {
+.Home .sBody {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
     padding-top: 40px;
     gap: 30px;
 }
-.sBodyCard {
+.Home .sBodyCard {
     overflow: hidden;
     border-radius: 6px;
 }
-.cardImg {
+.Home .cardImg {
     overflow: hidden;
     height: 300px;
     width: 300px;
 }
-.cardImg img {
+.Home .cardImg img {
     width: 100%;
     height: auto;
 }
-.cardBody {
+.Home .cardBody {
     padding: 16px;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.cardBody h2 {
+.Home .cardBody h2 {
     font-size: 1.3rem;
 }
 
-.sBodyTeam {
+.Home .sBodyTeam {
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -92,7 +95,7 @@
     gap: 30px;
     cursor: pointer;
 }
-.sBodyTeam .banner {
+.Home .sBodyTeam .banner {
     padding: 20px;
     width: 50%;
     border-radius: 6px;

@@ -302,48 +302,52 @@ def teams():
 
 def players():
     players = [
-        ["Brian", "Callis", 33, "010 1 718 222 2222","M",231,1,2],
-        ["Bronson", "Conlin", 27, "010 1 722 305 2046","M",231,1,3],
-        ["Benjamin", "Benecke", 30, "010 1 715 046 2833","M",231,1,1],
-        ["Sam", "Jensen", 29, "010 1 713 289 2637","M",231,1,4],
-        ["Jerry", "Lawson", 31, "010 1 718 378 3365","M",231,1,4],
+        ["Brian", "Callis", 33, "010 1 718 222 2222","M",231,1,2, "images/m2.jpg"],
+        ["Bronson", "Conlin", 27, "010 1 722 305 2046","M",231,1,3,"images/m3.jpg"],
+        ["Benjamin", "Benecke", 30, "010 1 715 046 2833","M",231,1,1,"images/m4.jpg"],
+        ["Sam", "Jensen", 29, "010 1 713 289 2637","M",231,1,4,"images/m17.jpg"],
+        ["Jerry", "Lawson", 31, "010 1 718 378 3365","M",231,1,4,"images/m18.jpg"],
 
-        ["Guillaume", "Prez", 25, "33 123 456 789","M",68,2,3],
-        ["Pierre", "Meunier", 34, "33 278 3O0 387","M",68,2,4],
-        ["Sébastien", "Caron", 29, "33 278 388 108","M",68,2,2],
-        ["Jean Marie", "Perrin", 0, "33 O48 2O1 2O4","M",68,2,4],
-        ["Sylvain", "Levy", 0, "33 287 377 349","M",68,2,1],
+        ["Guillaume", "Prez", 25, "33 123 456 789","M",68,2,3,"images/m5.jpg",],
+        ["Pierre", "Meunier", 34, "33 278 3O0 387","M",68,2,4,"images/m19.jpg",],
+        ["Sébastien", "Caron", 29, "33 278 388 108","M",68,2,2,"images/m12.jpg",],
+        ["Jean Marie", "Perrin", 0, "33 O48 2O1 2O4","M",68,2,4,"images/m20.jpg",],
+        ["Sylvain", "Levy", 0, "33 287 377 349","M",68,2,1,"images/m11.jpg"],
+    
+        ["Greg", "Polevoy", 30, "030 1 416 704 9448","M",32,3,1,"images/m6.jpg",],
+        ["Joshua", "Friars", 33, "030 1 389 276 3849","M",32,3,4,"images/m21.jpg",],
+        ["Alex", "Smanster", 26, "030 1 203 389 2683","M",32,3,3,"images/male_fighter.jpg",],
+        ["Matthew", "Willson", 30, "030 1 394 226 3944","M",32,3,2,"images/m12.jpg",],
+        ["Trevor", "Armstrong", 27, "030 1 342 432 3340","M",32,3,4,"images/male_fighter.jpg",],
 
-        ["Greg", "Polevoy", 30, "030 1 416 704 9448","M",32,3,1],
-        ["Joshua", "Friars", 33, "030 1 389 276 3849","M",32,3,4],
-        ["Alex", "Smanster", 26, "030 1 203 389 2683","M",32,3,3],
-        ["Matthew", "Willson", 30, "030 1 394 226 3944","M",32,3,2],
-        ["Trevor", "Armstrong", 27, "030 1 342 432 3340","M",32,3,4],
+        ["Adam", "Jurga", 24, "48 057 489 576","M",1,4,4,"images/male_fighter.jpg",],
+        ["Adrian", "Siembida", 32, "48 300 462 930","M",1,4,1,"images/m7.jpg",],
+        ["Aleksander", "Blausz", 30, "48 349 300 462","M",1,4,3,"images/male_fighter.jpg",],
+        ["Artur", "Frontczak", 28, "48 394 378 103","M",1,4,2,"images/m10.jpg",],
+        ["Boleslaw", "Sitek", 25, "48 204 210 352","M",1,4,4,"images/m15.jpg",],
+        
 
-        ["Adam", "Jurga", 24, "48 057 489 576","M",1,4,4],
-        ["Adrian", "Siembida", 32, "48 300 462 930","M",1,4,1],
-        ["Aleksander", "Blausz", 30, "48 349 300 462","M",1,4,3],
-        ["Artur", "Frontczak", 28, "48 394 378 103","M",1,4,2],
-        ["Boleslaw", "Sitek", 25, "48 204 210 352","M",1,4,4],
+        ["Alex", "Jacobsen", 29, "01 98 308 888","M",10,5,3,"images/m8.jpg",],
+        ["Bowen", "Slater", 32, "01 23 390 231","M",10,5,2,"images/m9.jpg",],
+        ["Brad", "Swales", 30, "01 78 300 256","M",10,5,4,"images/m14.jpg",],
+        ["Casey", "Lennon", 26, "01 93 498 190","M",10,5,1,"images/male_fighter.jpg",],
+        ["Christian", "Sierra", 24, "01 39 276 220","M",10,5,4,"images/male_fighter.jpg",],
+        
 
-        ["Alex", "Jacobsen", 29, "01 98 308 888","M",10,5,3],
-        ["Bowen", "Slater", 32, "01 23 390 231","M",10,5,2],
-        ["Brad", "Swales", 30, "01 78 300 256","M",10,5,4],
-        ["Casey", "Lennon", 26, "01 93 498 190","M",10,5,1],
-        ["Christian", "Sierra", 24, "01 39 276 220","M",10,5,4],
+        ["Abigail", "Tobin", 24, "010 1 390 227 5376","F",231,6,1,"images/f9.jpg",],
+        ["Ashley", "Lyons", 26, "010 1 278 109 2893","F",231,6,1,"images/f6.jpg",],
+        ["Alexandra", "Jasper", 21, "010 1 390 333 2093","F",231,6,1,"images/f5.jpg",],
+        ["Alice", "Langton", 31, "010 1 293 122 2677","F",231,6,1,"images/f9.jpg",],
+        ["Amari", "Brooks", 29, "010 1 143 276 2899","F",231,6,1,"images/f4.jpg",],
+        
 
-        ["Abigail", "Tobin", 24, "010 1 390 227 5376","F",231,6,1],
-        ["Ashley", "Lyons", 26, "010 1 278 109 2893","F",231,6,1],
-        ["Alexandra", "Jasper", 21, "010 1 390 333 2093","F",231,6,1],
-        ["Alice", "Langton", 31, "010 1 293 122 2677","F",231,6,1],
-        ["Amari", "Brooks", 29, "010 1 143 276 2899","F",231,6,1],
-
-        ["Demetria", "Ahlquist", 28, "020 3899 1521","F",230,7,4],
-        ["Elyce", "Ellington", 32, "020 3894 1593","F",230,7,4],
-        ["Freyja", "Seymore", 25, "020 0023 2701","F",230,7,1],
-        ["Genevieve", "Drouin", 29, "020 2739 2701","F",230,7,2],
-        ["Karine", "Porchet", 30, "020 3674 3982","F",230,7,3],
+        ["Demetria", "Ahlquist", 28, "020 3899 1521","F",230,7,4,"images/f9.jpg",],
+        ["Elyce", "Ellington", 32, "020 3894 1593","F",230,7,4,"images/f9.jpg",],
+        ["Freyja", "Seymore", 25, "020 0023 2701","F",230,7,1,"images/f7.jpg",],
+        ["Genevieve", "Drouin", 29, "020 2739 2701","F",230,7,2,"images/f9.jpg",],
+        ["Karine", "Porchet", 30, "020 3674 3982","F",230,7,3,"images/f9.jpg",],
     ]
+
     for p in players:
         country = Country.objects.get(id=p[5])
         team = Team.objects.get(id=p[6])
@@ -356,7 +360,7 @@ def players():
             "phone" : lambda x : p[3],
             "mail" : lambda x : f"{p[0]}{p[1]}@buhurt.com",
             "gender" : lambda x : p[4],
-            "image" : lambda x : "images/male_fighter.jpg",
+            "image" : lambda x : p[8],
             "country" : lambda x : country,
             "team" : lambda x : team,
             "role" : lambda x : role,
@@ -365,21 +369,23 @@ def players():
         print(pks)
 
     teamless = [
-        ["Aaron", "Miller", 30, "030 3892 3672","M",None,None,3],
-        ["Arvid", "Gahsche", 25, "010 2093 2651","M",None,None,1],
-        ["Bastien", "Grandcamp", 32, "015 2983 3982","M",None,None,4],
-        ["Bart", "De Laat", 21, "012 2990 1654","M",None,None,4],
-        ["Ben", "Bailey", 28, "020 0992 1543","M",None,None,2],
-        ["Benas", "Levulis", 31, "011 3988 2443","M",None,None,1],
-        ["Bohumil", "Masnicak", 34, "014 2731 0993","M",None,None,2],
+        ["Aaron", "Miller", 30, "030 3892 3672","M",None,None,3,"images/male_fighter.jpg",],
+        ["Arvid", "Gahsche", 25, "010 2093 2651","M",None,None,1,"images/m13.jpg",],
+        ["Bastien", "Grandcamp", 32, "015 2983 3982","M",None,None,4,"images/male_fighter.jpg",],
+        ["Bart", "De Laat", 21, "012 2990 1654","M",None,None,4,"images/male_fighter.jpg",],
+        ["Ben", "Bailey", 28, "020 0992 1543","M",None,None,2,"images/male_fighter.jpg",],
+        ["Benas", "Levulis", 31, "011 3988 2443","M",None,None,1,"images/male_fighter.jpg",],
+        ["Bohumil", "Masnicak", 34, "014 2731 0993","M",None,None,2,"images/male_fighter.jpg",],
+        
 
-        ["Beth", "Hammer", 27, "013 9834 2267","F",None,None,3],
-        ["Bruna", "Longley", 34, "010 3197 2014","F",None,None,3],
-        ["Celia", "Rocton", 28, "001 3879 0922","F",None,None,3],
-        ["Christine", "Napolitano", 20, "003 3821 3894","F",None,None,3],
-        ["Charlotte", "Marchand", 19, "019 2753 4467","F",None,None,3],
-        ["Emeline", "Barbier", 23, "020 3892 4362","F",None,None,3],
-        ["Helmi", "Keränen", 32, "012 4983 4663","F",None,None,3],
+        ["Beth", "Hammer", 27, "013 9834 2267","F",None,None,3,"images/f10.jpg",],
+        ["Bruna", "Longley", 34, "010 3197 2014","F",None,None,3,"images/f2.jpg",],
+        ["Celia", "Rocton", 28, "001 3879 0922","F",None,None,3,"images/f11.jpg",],
+        ["Christine", "Napolitano", 20, "003 3821 3894","F",None,None,3,"images/f1.jpg",],
+        ["Charlotte", "Marchand", 19, "019 2753 4467","F",None,None,3,"images/f8.jpg",],
+        ["Emeline", "Barbier", 23, "020 3892 4362","F",None,None,3,"images/f9.jpg",],
+        ["Helmi", "Keränen", 32, "012 4983 4663","F",None,None,3,"images/f3.jpg",],
+        
     ]
     for t in teamless:
         role = Role.objects.get(id=t[7])
@@ -391,7 +397,7 @@ def players():
             "phone" : lambda x : t[3],
             "mail" : lambda x : f"{t[0]}{t[1]}@buhurt.com",
             "gender" : lambda x : t[4],
-            "image" : lambda x : "images/male_fighter.jpg",
+            "image" : lambda x : t[8],
             "country" : lambda x : None,
             "team" : lambda x : None,
             "role" : lambda x : role,

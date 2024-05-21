@@ -33,8 +33,9 @@ export default function PlayerTeam({players,teams,}) {
             <div>
                 <div className="sBody">
                     {
-                        teamPlayer && teamPlayer[0] != undefined && teams ?
+                        teamPlayer && teams ?
                         teamPlayer.map((t,i)=>(
+                        t != undefined ?
                         <div className="sBodyCard s-w" key={i}>
                             <div className="cardImg">
                                 <img src={"http://localhost:8000"+t.image} alt="" />
@@ -43,11 +44,18 @@ export default function PlayerTeam({players,teams,}) {
                                 <Link to={`../players/${t.id}`} className="t-b">
                                     <h2>{t.firstname} {t.lastname}</h2>
                                 </Link>
-                                <Link to={`../teams/${teams[t.team-1].id}`} className="t-b">
-                                    <h4>{teams[t.team-1].name}</h4>
-                                </Link>
+                                {
+                                    teams[t.team-1] != undefined ?
+                                    <Link to={`../teams/${teams[t.team-1].id}`} className="t-b">
+                                        <h4>{teams[t.team-1].name}</h4>
+                                    </Link>
+                                    :
+                                    ""
+                                }
                             </div>
                         </div>
+                        :
+                        ""
                         ))
                         :
                         ""

@@ -34,6 +34,7 @@ export default function PlayerTeamless({players}) {
                 {
                     teamless && teamless[0] != undefined ?
                     teamless.map((t,i)=>(
+                    t != undefined ?
                     <div className="sBodyCard s-db bg-db" key={i}>
                         <div className="cardImg">
                             <img src={"http://localhost:8000"+t.image} alt="" />
@@ -44,6 +45,8 @@ export default function PlayerTeamless({players}) {
                             </Link>
                         </div>
                     </div>
+                    :
+                    ""
                     ))
                     :
                     ""

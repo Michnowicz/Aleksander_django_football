@@ -31,26 +31,29 @@ export default function MaleRandom({players, teams}) {
             </div>
             <div className="sBody">
                 {
-                    male && teams && players && male[0] != undefined ?
-                    male.map((t,i)=>(
+                    male && teams && players ?
+                    male.map((m,i)=>(
+                    m != undefined ?
                     <div className="sBodyCard s-w" key={i}>
                         <div className="cardImg">
-                            <img src={"http://localhost:8000"+t.image} alt="" />
+                            <img src={"http://localhost:8000"+m.image} alt="" />
                         </div>
                         <div className="cardBody t-b">
-                            <Link to={`../players/${t.id}`} className="t-b">
-                                <h2>{t.firstname} {t.lastname}</h2>
+                            <Link to={`../players/${m.id}`} className="t-b">
+                                <h2>{m.firstname} {m.lastname}</h2>
                             </Link>
                             {
-                                t.team == null ?
+                                teams[m.team-1] == undefined ?
                                 <h4 className="t-b">No team</h4>
                                 :
-                                <Link to={`../teams/${teams[t.team-1].name}`} className="t-b">
-                                    <h4>{teams[t.team-1].name}</h4>
+                                <Link to={`../teams/${teams[m.team-1].name}`} className="t-b">
+                                    <h4>{teams[m.team-1].name}</h4>
                                 </Link>
                             }
                         </div>
                     </div>
+                    :
+                    ""
                     ))
                     :
                     ""

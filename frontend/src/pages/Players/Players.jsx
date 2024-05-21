@@ -35,6 +35,7 @@ export default function Players() {
                     {
                         players && teams ?
                         players.map((p,i)=>(
+                            p != undefined ?
                             <div className="sBodyCard s-db bg-db">
                                 <div className="cardImg">
                                     <img src={"http://localhost:8000"+p.image} alt="" />
@@ -44,7 +45,7 @@ export default function Players() {
                                         <h2>{p.firstname} {p.lastname}</h2>
                                     </Link>
                                     {
-                                        p.team == null  ?
+                                        teams[p.team-1] == undefined  ?
                                         <h3>No Team</h3>
                                         :
                                         <Link to={`../teams/${teams[p.team-1].id}`} className="t-g">
@@ -53,6 +54,8 @@ export default function Players() {
                                     }
                                 </div>
                             </div>
+                            :
+                            ""
                         ))
                         :
                         ""

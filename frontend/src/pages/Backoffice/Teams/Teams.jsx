@@ -51,17 +51,24 @@ export default function TeamsGet() {
                     </div>
                     <div className="teamsInfo">
                         {
-                            (teams && continents) ?
+                            teams && continents ?
                             teams.map((t,i)=>(
+                                t != undefined ?
                                 <div key={i} className="team">
                                     <p className="c1">{t.name}</p>
                                     <p className="c2">{t.city}</p>
-                                    <p className="c4">{continents[t.continent-1].name}</p>
+                                    {continents[t.continent-1] != undefined ?
+                                            <p className="c4">{continents[t.continent-1].name}</p>
+                                        :
+                                            ""
+                                    }
                                     <div className="c3">
                                         <Link className="c3a" to={`../backoffice/teams/${t.id}`}>Update</Link>
                                         <button className="c3b" onClick={()=>deletePlayer(t.id)}>Delete</button>
                                     </div>
                                 </div>
+                                :
+                                ""
                             ))
                             :
                             ""

@@ -31,8 +31,9 @@ export default function FemaleRandom({players, teams}) {
             </div>
             <div className="sBody">
                 {
-                    female && female[0] != undefined && teams && players ?
+                    female && teams && players ?
                     female.map((f,i)=>(
+                    f != undefined ?
                     <div className="sBodyCard s-db bg-db" key={i}>
                         <div className="cardImg">
                             <img src={"http://localhost:8000"+f.image} alt="" />
@@ -51,6 +52,8 @@ export default function FemaleRandom({players, teams}) {
                             }
                         </div>
                     </div>
+                    :
+                    ""
                     ))
                     :
                     ""

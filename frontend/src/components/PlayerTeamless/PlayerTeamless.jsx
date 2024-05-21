@@ -32,7 +32,7 @@ export default function PlayerTeamless({players}) {
             </div>
             <div className="sBody">
                 {
-                    teamless ?
+                    teamless && teamless[0] != undefined ?
                     teamless.map((t,i)=>(
                     <div className="sBodyCard s-db bg-db" key={i}>
                         <div className="cardImg">

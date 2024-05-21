@@ -22,14 +22,6 @@ export default function CreatePlayer({teams, roles,countries,setPlayers,players}
     })
     const [imageFile, setImageFile] = useState(null);
 
-    // const countPlayers = () => {
-    //     const filter = players.filter(p => p.team == playerForm.team)
-    //     if (filter.length == 5) {
-    //         return(false)
-    //     } else {
-    //         return(true)
-    //     }
-    // }
     const countPlayers = () => {
         const filter = players.filter(p => p.team == playerForm.team)
         if (filter.length == 5) {
@@ -112,10 +104,11 @@ export default function CreatePlayer({teams, roles,countries,setPlayers,players}
 
 
     return(
-        <div className="CreatePlayer">
+        <div className="CreatePlayer bg-db">
             <div className={err == true ? "popErr" : "disable"}>{errMessage}</div>
             <div className={success == true ? "popOK" : "disable"}>Player successfully created</div>
-            <form onSubmit={handleSubmit} className={show===false?"disabled":"cpForm"}>
+
+            <form onSubmit={handleSubmit} className={show===false?"disabled":"cpForm t-w"}>
                 <div className="imgForm">
                     <img src="" alt="" />
                     <input id="image_id" type="file" name="image" onChange={handleChange}/>
@@ -195,9 +188,8 @@ export default function CreatePlayer({teams, roles,countries,setPlayers,players}
                             </select>
                         </div>
                         <div>
-                            <button type="submit" className="btn btn-light">Save</button>
+                            <button type="submit" className="btn btn-light cb">Save</button>
                         </div>
-                        
                     </div>
                 </div>
             </form>

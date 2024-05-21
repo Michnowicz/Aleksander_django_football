@@ -23,7 +23,7 @@
     box-sizing: border-box;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 1px 1px 8px rgb(188, 188, 188);
+    /* box-shadow: 1px 1px 8px rgb(188, 188, 188); */
 }
 
 .players .c1 {
@@ -109,4 +109,25 @@
 }
 .players .c5b:active {
     background-color: rgb(255, 164, 164);
+}
+
+
+
+.PlayersGet .bg-ddb {
+    background-color: #020e13;
+}
+.PlayersGet .bg-db {
+    background-color: #103237;
+}
+.PlayersGet .b-b {
+    border-bottom: 2px solid black;
+}
+.PlayersGet .t-b {
+    color: black;
+}
+.PlayersGet .t-w {
+    color: white;
+}
+.PlayersGet .t-g {
+    color: rgba(255, 255, 255, 0.636);
 }

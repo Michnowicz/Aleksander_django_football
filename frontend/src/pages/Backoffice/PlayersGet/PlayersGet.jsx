@@ -35,9 +35,10 @@ export default function PlayersGet() {
             
             <NavLeft/>
 
-            <div className="Infos">
+            <div className="Infos bg-ddb">
                 <CreatePlayer roles={roles} teams={teams} countries={countries} setPlayers={setPlayers} players={players}/>
-                <div className="players">
+                
+                <div className="players bg-db t-w s-db">
                     <div className="playersTitle">
                         <h3 className="c1">Firstname</h3>
                         <h3 className="c2">Lastname</h3>

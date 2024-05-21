@@ -32,7 +32,7 @@ export default function PlayerTeam({players,teams,}) {
             </div>
             <div className="sBody">
                 {
-                    teamPlayer && teams ?
+                    teamPlayer && teamPlayer[0] != undefined && teams ?
                     teamPlayer.map((t,i)=>(
                     <div className="sBodyCard s-w" key={i}>
                         <div className="cardImg">

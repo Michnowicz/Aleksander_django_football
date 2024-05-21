@@ -53,7 +53,7 @@ export default function CreateTeam({continents, setTeams,}) {
 
 
     return(
-        <div className="CreateTeam">
+        <div className="CreateTeam bg-db t-w s-db">
             <form onSubmit={handleSubmit} className={show===false?"disabled":"cpForm"}>
                 <div className="cInput">
                     <label htmlFor="name">Name</label>

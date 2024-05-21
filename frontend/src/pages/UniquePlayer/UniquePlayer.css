@@ -70,3 +70,34 @@
 .UniquePlayer .bodyInfo b, .bodyInfo p , .bodyInfo a {
     font-size: 1.2rem;
 }
+
+
+
+
+.UniquePlayer.bg-ddb {
+    background-color: #020e13;
+}
+.UniquePlayer .bg-ddb {
+    background-color: #020e13;
+}
+.UniquePlayer .bg-db {
+    background-color: #103237;
+}
+
+.UniquePlayer .s-db {
+    box-shadow: 1px 1px 20px #0a2226;
+}
+
+.UniquePlayer .b-b {
+    border-bottom: 2px solid black;
+}
+
+.UniquePlayer .t-b {
+    color: black;
+}
+.UniquePlayer .t-g {
+    color: rgba(255, 255, 255, 0.636);
+}
+.UniquePlayer .t-w {
+    color: rgb(255, 255, 255);
+}

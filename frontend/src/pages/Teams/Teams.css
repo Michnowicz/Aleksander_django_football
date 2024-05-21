@@ -21,6 +21,9 @@
     align-items: center;
 }
 
+.Teams.bg-ddb {
+    background-color: #020e13;
+}
 .Teams .bg-ddb {
     background-color: #020e13;
 }

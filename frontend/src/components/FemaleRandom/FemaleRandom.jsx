@@ -31,7 +31,7 @@ export default function FemaleRandom({players, teams}) {
             </div>
             <div className="sBody">
                 {
-                    (female != null) && teams && players ?
+                    female && female[0] != undefined && teams && players ?
                     female.map((f,i)=>(
                     <div className="sBodyCard s-db bg-db" key={i}>
                         <div className="cardImg">

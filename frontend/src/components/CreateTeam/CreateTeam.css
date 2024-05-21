@@ -6,7 +6,7 @@
     box-sizing: border-box;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 1px 1px 8px rgb(188, 188, 188);
+    /* box-shadow: 1px 1px 8px rgb(188, 188, 188); */
 }
 
 .CreateTeam .cpForm {
@@ -20,8 +20,59 @@
     justify-content: space-between;
     gap: 10px;
     width: 250px;
+    align-items: center;
 }
 
+.CreateTeam button {
+    color: white;
+    font-size: 1.1rem;
+    background-color: rgb(100, 180, 255);
+    border-radius: 6px;
+    padding: 8px 12px 8px 12px;
+    border: none;
+    cursor: pointer;
+}
+.CreateTeam button:hover {
+    background-color: rgb(46, 154, 255);
+}
+.CreateTeam button:active {
+    background-color: rgb(152, 205, 255);
+}
+
+
+.CreateTeam .bg-ddb {
+    background-color: #020e13;
+}
+.CreateTeam .bg-db {
+    background-color: #103237;
+}
+.CreateTeam .bg-w {
+    background-color: white;
+}
+
+.CreateTeam .s-w {
+    box-shadow: 1px 1px 8px rgb(188, 188, 188);
+}
+.CreateTeam .s-db {
+    box-shadow: 1px 1px 8px #103237;
+}
+
+.CreateTeam .b-w {
+    border-bottom: 2px solid white;
+}
+.CreateTeam .b-b {
+    border-bottom: 2px solid black;
+}
+
+.CreateTeam .t-b {
+    color: black;
+}
+.CreateTeam .t-w {
+    color: white;
+}
+.CreateTeam .t-g {
+    color: rgba(255, 255, 255, 0.636);
+}
 .CreateTeam button {
     color: white;
     font-size: 1.1rem;

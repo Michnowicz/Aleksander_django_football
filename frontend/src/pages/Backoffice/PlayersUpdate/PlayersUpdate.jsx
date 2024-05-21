@@ -19,6 +19,7 @@ export default function PlayersUpdate() {
         getRoles()
         getTeams()
     },[])
+
     const getPlayer = async () => {
         const response = await axios.get(`http://localhost:8000/api/data/players/${id}`)
         setPlayer(response.data.data)
@@ -61,21 +62,15 @@ export default function PlayersUpdate() {
         window.location.reload();
     }
 
-    useEffect(()=>{
-        console.log(player);
-        // console.log(roles);
-        // console.log(countries);
-        // console.log(teams);
-    },[player, roles, countries,teams])
 
     return(
         <section className="PlayersUpdate">
             <NavLeft/>
 
-            <div className="Infos">
+            <div className="Infos bg-ddb">
                 {
                     player && countries && roles && teams ?
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} className=" bg-db t-w s-db">
                         <div className="playerImage">
                             <img src={"http://localhost:8000"+player.image} alt={player.image} />
                             <input id="image_id" type="file" name="image" onChange={handleChange}/>

@@ -39,9 +39,10 @@ export default function TeamsGet() {
 
             <NavLeft/>
 
-            <div className="Infos">
+            <div className="Infos bg-ddb">
                 <CreateTeam continents={continents} setTeams={setTeams}/>
-                <div className="teams">
+                
+                <div className="teams bg-db t-w s-db">
                     <div className="teamsTitle">
                         <h3 className="c1">Name</h3>
                         <h3 className="c2">city</h3>

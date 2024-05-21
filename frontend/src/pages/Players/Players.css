@@ -30,13 +30,16 @@
 }
 
 .Players .s-db {
-    box-shadow: 1px 1px 8px #01090b;
+    box-shadow: 1px 1px 8px#103237;
 }
 
 .Players .b-b {
     border-bottom: 2px solid black;
 }
 
+.Players .t-w {
+    color: rgb(255, 255, 255);
+}
 .Players .t-b {
     color: black;
 }

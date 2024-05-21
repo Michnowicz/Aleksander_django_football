@@ -19,28 +19,28 @@
     align-items: center;
 }
 
-.bg-ddb {
+.UniqueTeam.bg-ddb {
     background-color: #020e13;
 }
-.bg-db {
-    background-color: #03141a;
+.UniqueTeam .bg-db {
+    background-color: #103237;
 }
 
-.s-db {
+.UniqueTeam .s-db {
     box-shadow: 1px 1px 8px #01090b;
 }
 
-.b-b {
+.UniqueTeam .b-b {
     border-bottom: 2px solid black;
 }
 
-.t-b {
+.UniqueTeam .t-b {
     color: black;
 }
-.t-g {
+.UniqueTeam .t-g {
     color: rgba(255, 255, 255, 0.636);
 }
-.t-w {
+.UniqueTeam .t-w {
     color: rgb(255, 255, 255);
 }
 

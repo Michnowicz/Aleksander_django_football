@@ -36,14 +36,19 @@ export default function Home() {
             <div className="Home">
                 <Hero/>
                 {
-                    
+                    players && teams ?
+                    <>
+                        <PlayerTeamless players={players}/>
+                        <PlayerTeam players={players} teams={teams}/>
+                        <European teams={teams}/>
+                        <NonEuropean teams={teams}/>
+                        <FemaleRandom players={players} teams={teams}/>
+                        <MaleRandom players={players} teams={teams}/>
+                    </>
+                    :
+                    <p>loading data</p>
+                
                 }
-                <PlayerTeamless players={players}/>
-                <PlayerTeam players={players} teams={teams}/>
-                <European teams={teams}/>
-                <NonEuropean teams={teams}/>
-                <FemaleRandom players={players} teams={teams}/>
-                <MaleRandom players={players} teams={teams}/>
             </div>
         </>
     )

@@ -1,11 +1,11 @@
 
 
 .Navbar {
-    background-color: #03141a;
+    background-color: #103237;
     display: flex;
     position: fixed;
     z-index: 100;
-    box-shadow: 1px 1px 8px #01090b;
+    box-shadow: 1px 1px 8px #091f23;
 }
 
 .navLogo {

@@ -37,7 +37,7 @@
     box-sizing: border-box;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 1px 1px 8px rgb(188, 188, 188);
+    /* box-shadow: 1px 1px 8px rgb(188, 188, 188); */
 }
 .teams .c1 {
     width: 30%;
@@ -104,4 +104,53 @@
 }
 .teams .c3b:active {
     background-color: rgb(255, 164, 164);
+}
+
+
+
+.teams .bg-ddb {
+    background-color: #020e13;
+}
+.TeamsGet .bg-db {
+    background-color: #103237;
+}
+.TeamsGet .bg-w {
+    background-color: white;
+}
+
+.TeamsGet .s-w {
+    box-shadow: 1px 1px 8px rgb(188, 188, 188);
+}
+.TeamsGet .s-db {
+    box-shadow: 1px 1px 8px #103237;
+}
+
+.TeamsGet .b-w {
+    border-bottom: 2px solid white;
+}
+.TeamsGet .b-b {
+    border-bottom: 2px solid black;
+}
+
+.TeamsGet .t-b {
+    color: black;
+}
+.TeamsGet .t-w {
+    color: white;
+}
+.TeamsGet .t-g {
+    color: rgba(255, 255, 255, 0.636);
+}
+
+.TeamsGet .cInput input, .TeamsGet .cInput select {
+    color: white;
+    background-color: #00000000;
+    padding: 4px 10px 4px 6px;
+    border: 2px solid #245f68;
+    border-radius: 4px;
+    outline: none;
+}
+.TeamsGet .cInput input:focus, .TeamsGet .cInput select:focus {
+    outline: thick double #245f68;
+    border: 2px solid #00000000;
 }

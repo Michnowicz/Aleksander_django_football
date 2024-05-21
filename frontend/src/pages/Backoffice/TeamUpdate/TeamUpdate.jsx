@@ -45,10 +45,10 @@ export default function TeamUpdate() {
         <section className="TeamUpdate">
             <NavLeft/>
             
-            <div className="Infos">
+            <div className="Infos bg-ddb t-w">
                 { 
                 team && continents ?
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="t-w bg-db s-db">
                     <div className="cInput">
                         <label htmlFor="name">Name</label>
                         <input type="text" name='name' id='name_id' value={team.name} onChange={handleChange}/>

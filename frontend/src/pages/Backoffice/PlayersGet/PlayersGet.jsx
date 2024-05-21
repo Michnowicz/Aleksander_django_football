@@ -48,14 +48,14 @@ export default function PlayersGet() {
                     </div>
                     <div className="playersInfo">
                         {
-                        ( players && roles) ?
+                        players && roles && teams ?
                             players.map((p,i)=>(
                                 <div key={i} className="player">
                                     <p className="c1">{p.firstname}</p>
                                     <p className="c2">{p.lastname}</p>
                                     <p className="c3">{roles[p.role-1].name}</p>
                                     {
-                                        p.team == null ?
+                                        teams[p.team-1] == undefined ?
                                         <p className="c4">No Team</p>
                                         :
                                         <p className="c4">{teams[p.team-1].name}</p>

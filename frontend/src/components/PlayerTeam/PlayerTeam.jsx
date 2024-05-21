@@ -21,7 +21,7 @@ export default function PlayerTeam({players,teams,}) {
                 randomPlayers.push(TeamPlayers[randomNum(0, TeamPlayers.length)])
             }
             setTeamPlayer(randomPlayers)
-        }  
+        }
     },[players])
 
     return(
@@ -30,27 +30,29 @@ export default function PlayerTeam({players,teams,}) {
                 <h2>Players with Teams</h2>
                 <div className="space"></div>
             </div>
-            <div className="sBody">
-                {
-                    teamPlayer && teamPlayer[0] != undefined && teams ?
-                    teamPlayer.map((t,i)=>(
-                    <div className="sBodyCard s-w" key={i}>
-                        <div className="cardImg">
-                            <img src={"http://localhost:8000"+t.image} alt="" />
+            <div>
+                <div className="sBody">
+                    {
+                        teamPlayer && teamPlayer[0] != undefined && teams ?
+                        teamPlayer.map((t,i)=>(
+                        <div className="sBodyCard s-w" key={i}>
+                            <div className="cardImg">
+                                <img src={"http://localhost:8000"+t.image} alt="" />
+                            </div>
+                            <div className="cardBody t-b">
+                                <Link to={`../players/${t.id}`} className="t-b">
+                                    <h2>{t.firstname} {t.lastname}</h2>
+                                </Link>
+                                <Link to={`../teams/${teams[t.team-1].id}`} className="t-b">
+                                    <h4>{teams[t.team-1].name}</h4>
+                                </Link>
+                            </div>
                         </div>
-                        <div className="cardBody t-b">
-                            <Link to={`../players/${t.id}`} className="t-b">
-                                <h2>{t.firstname} {t.lastname}</h2>
-                            </Link>
-                            <Link to={`../teams/${teams[t.team-1].id}`} className="t-b">
-                                <h4>{teams[t.team-1].name}</h4>
-                            </Link>
-                        </div>
-                    </div>
-                    ))
-                    :
-                    ""
-                }
+                        ))
+                        :
+                        ""
+                    }
+                </div>
             </div>
         </section>
     )

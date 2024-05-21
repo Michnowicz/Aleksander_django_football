@@ -15,6 +15,7 @@
     flex-direction: column;
     gap: 40px;
     box-sizing: content-box;
+    background-color: #020e13;
 }
 
 .teamsTitle {
@@ -108,7 +109,7 @@
 
 
 
-.teams .bg-ddb {
+.Infos .bg-ddb {
     background-color: #020e13;
 }
 .TeamsGet .bg-db {

@@ -153,3 +153,8 @@ def update_team(request,id):
             serializer.save()
         return Response(request.data)
     return Response(serializer.error, status=status.HTTP_400_BAD_REQUEST)
+
+def test(request, id):
+    team = Team.objects.get(id=id)
+    players = Player.objects.filter(team=id).count()
+    return JsonResponse({"data":players})

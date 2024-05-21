@@ -27,7 +27,7 @@ export default function European({teams}) {
                     european.map((e,i)=>(
                     <div className="banner s-db bg-db" key={i}>
                         <Link to={`../teams/${e.id}`} className="t-w">
-                            <h2 className="t-w">{e.name}</h2>
+                            <h2>{e.name}</h2>
                         </Link>
                     </div>
                     ))

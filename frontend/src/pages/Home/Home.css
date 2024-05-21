@@ -10,7 +10,7 @@
     background-color: #020e13;
 }
 .Home .bg-db {
-    background-color: #03141a;
+    background-color: #103237;
 }
 .Home .bg-w {
     background-color: white;
@@ -20,7 +20,7 @@
     box-shadow: 1px 1px 8px rgb(188, 188, 188);
 }
 .Home .s-db {
-    box-shadow: 1px 1px 8px #01090b;
+    background-color: #103237;
 }
 
 .Home .b-w {
@@ -96,7 +96,6 @@
     padding: 10px;
     padding-top: 40px;
     gap: 30px;
-    cursor: pointer;
 }
 .Home .sBodyTeam .banner {
     padding: 20px;

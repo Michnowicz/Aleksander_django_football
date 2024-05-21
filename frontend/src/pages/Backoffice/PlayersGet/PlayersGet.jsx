@@ -36,7 +36,7 @@ export default function PlayersGet() {
             <NavLeft/>
 
             <div className="Infos">
-                <CreatePlayer roles={roles} teams={teams} countries={countries} setPlayers={setPlayers}/>
+                <CreatePlayer roles={roles} teams={teams} countries={countries} setPlayers={setPlayers} players={players}/>
                 <div className="players">
                     <div className="playersTitle">
                         <h3 className="c1">Firstname</h3>

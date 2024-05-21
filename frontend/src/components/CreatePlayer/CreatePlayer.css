@@ -2,11 +2,13 @@
 
 .CreatePlayer {
     padding: 40px;
-    width: 100%;
-    box-sizing: border-box;
+    box-sizing: content-box;
     background-color: white;
     border-radius: 10px;
     box-shadow: 1px 1px 8px rgb(188, 188, 188);
+}
+.CreatePlayer .disable {
+    display: none;
 }
 
 .cpForm {
@@ -57,4 +59,22 @@
 }
 .CreatePlayer .create button:active {
     background-color: rgb(152, 205, 255);
+}
+
+
+.popErr {
+    padding: 20px;
+    background-color: #fd6b79;
+    border-radius: 6px;
+    margin-bottom: 50px;
+    color: #8a121e;
+    border: 1px solid #e95463;
+}
+.popOK {
+    padding: 20px;
+    background-color: #6cd67e;
+    border-radius: 6px;
+    margin-bottom: 50px;
+    color: #256708;
+    border: 1px solid #58c46a;
 }

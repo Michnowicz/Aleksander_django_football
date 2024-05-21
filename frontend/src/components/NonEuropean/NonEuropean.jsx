@@ -26,8 +26,8 @@ export default function NonEuropean({teams}) {
                     NonEuropean ?
                     NonEuropean.map((e,i)=>(
                     <div className="banner s-w" key={i}>
-                        <Link to={`../teams/${e.id}`} className="t-w">
-                            <h2 className="t-b">{e.name}</h2>
+                        <Link to={`../teams/${e.id}`} className="t-b">
+                            <h2>{e.name}</h2>
                         </Link>
                     </div>
                     ))

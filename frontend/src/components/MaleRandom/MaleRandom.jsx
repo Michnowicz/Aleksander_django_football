@@ -15,9 +15,8 @@ export default function MaleRandom({players, teams}) {
     useEffect(()=>{
         if (players != null) {
             const malePlayers = players.filter(p => (p.gender == "M"))
-            console.log(malePlayers);
             const randomPlayers = []
-            for (let i = 1; i < 5; i++) {
+            for (let i = 1; i < 6; i++) {
                 randomPlayers.push(malePlayers[randomNum(0, malePlayers.length)])
             }
             setMale(randomPlayers)

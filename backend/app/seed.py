@@ -302,7 +302,7 @@ def teams():
 
 def players():
     players = [
-        ["Brian", "Callis", 33, "010 1 718 222 2222","M",231,1,2, "images/m2.jpg"],
+        ["Brian", "Callis", 33, "010 1 718 222 2222","M",231,1,2, "images/male_fighter.jpg"],
         ["Bronson", "Conlin", 27, "010 1 722 305 2046","M",231,1,3,"images/m3.jpg"],
         ["Benjamin", "Benecke", 30, "010 1 715 046 2833","M",231,1,1,"images/m4.jpg"],
         ["Sam", "Jensen", 29, "010 1 713 289 2637","M",231,1,4,"images/m17.jpg"],

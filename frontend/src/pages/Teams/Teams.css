@@ -21,28 +21,28 @@
     align-items: center;
 }
 
-.bg-ddb {
+.Teams .bg-ddb {
     background-color: #020e13;
 }
-.bg-db {
-    background-color: #03141a;
+.Teams .bg-db {
+    background-color: #103237;
 }
 
-.s-db {
+.Teams .s-db {
     box-shadow: 1px 1px 8px #01090b;
 }
 
-.b-b {
+.Teams .b-b {
     border-bottom: 2px solid black;
 }
 
-.t-b {
+.Teams .t-b {
     color: black;
 }
-.t-g {
+.Teams .t-g {
     color: rgba(255, 255, 255, 0.636);
 }
-.t-w {
+.Teams .t-w {
     color: rgb(255, 255, 255);
 }
 

@@ -2,9 +2,12 @@ import { useEffect, useState } from "react"
 import "./CreatePlayer.css"
 import axios from "axios"
 
-export default function CreatePlayer({teams, roles,countries,setPlayers,}) {
+export default function CreatePlayer({teams, roles,countries,setPlayers,players}) {
     
     const [show, setShow] = useState(false)
+    const [errMessage, setErrMessage] = useState("")
+    const [err, setErr] = useState(false)
+    const [success, setSuccess] = useState(false)
 
     const [playerForm, setPlayerForm] = useState({
         firstname: "",
@@ -19,6 +22,41 @@ export default function CreatePlayer({teams, roles,countries,setPlayers,}) {
     })
     const [imageFile, setImageFile] = useState(null);
 
+    // const countPlayers = () => {
+    //     const filter = players.filter(p => p.team == playerForm.team)
+    //     if (filter.length == 5) {
+    //         return(false)
+    //     } else {
+    //         return(true)
+    //     }
+    // }
+    const countPlayers = () => {
+        const filter = players.filter(p => p.team == playerForm.team)
+        if (filter.length == 5) {
+            setErr(true)
+            setSuccess(false)
+            setErrMessage("Team already full")
+            return(false);
+        } else {
+            const formRole = playerForm.role
+            const roleFilter = players.filter(p => (p.role == formRole && p.team == playerForm.team)).length
+            if (formRole == "4" && roleFilter <= 1) {
+                setErr(false)
+                setSuccess(true)
+                return(true);
+            } else if (roleFilter <= 0) {
+                setErr(false)
+                setSuccess(true)
+                return(true);
+            } else {
+                setErr(true)
+                setSuccess(false)
+                setErrMessage("This role is already taken")
+                return(false);
+            }
+        }
+    }
+
     const createForm = async () => {
         try {
             const formData = new FormData();
@@ -31,13 +69,16 @@ export default function CreatePlayer({teams, roles,countries,setPlayers,}) {
             formData.append('country', playerForm.country);
             formData.append('team', playerForm.team);
             formData.append('role', playerForm.role);
-            
             formData.append('image', imageFile);
 
-            await fetch('http://127.0.0.1:8000/api/data/player_create', {
-                method: 'POST',
-                body: formData,
-            });
+            const flag = countPlayers()
+
+            if (flag == true) {
+                await fetch('http://127.0.0.1:8000/api/data/player_create', {
+                    method: 'POST',
+                    body: formData,
+                });
+            }
         } catch (error) {
             console.log(error);
         }
@@ -68,8 +109,12 @@ export default function CreatePlayer({teams, roles,countries,setPlayers,}) {
         setShow(!show)
     }
 
+
+
     return(
         <div className="CreatePlayer">
+            <div className={err == true ? "popErr" : "disable"}>{errMessage}</div>
+            <div className={success == true ? "popOK" : "disable"}>Player successfully created</div>
             <form onSubmit={handleSubmit} className={show===false?"disabled":"cpForm"}>
                 <div className="imgForm">
                     <img src="" alt="" />
@@ -152,6 +197,7 @@ export default function CreatePlayer({teams, roles,countries,setPlayers,}) {
                         <div>
                             <button type="submit" className="btn btn-light">Save</button>
                         </div>
+                        
                     </div>
                 </div>
             </form>
